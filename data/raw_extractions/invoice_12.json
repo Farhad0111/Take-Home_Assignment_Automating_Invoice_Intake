@@ -1,0 +1,47 @@
+{
+  "supplier_name": "みらいITソリューションズ株式会社",
+  "registration_no": "T505000500505",
+  "invoice_number": "MT-2026-014",
+  "issue_date_raw": "2026年2月10日",
+  "due_date_raw": "2026年3月31日",
+  "subtotal_raw": "540,000",
+  "tax_amount_raw": "54,000",
+  "total_amount_raw": "594,000",
+  "lines": [
+    {
+      "description": "業務システム改修",
+      "quantity": 1,
+      "unit": "式",
+      "unit_price": 450000,
+      "amount": 450000,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "追加ライセンス",
+      "quantity": 5,
+      "unit": "本",
+      "unit_price": 24000,
+      "amount": 120000,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "値引き",
+      "quantity": 1,
+      "unit": "式",
+      "unit_price": 30000,
+      "amount": 30000,
+      "tax_rate_hint": null
+    }
+  ],
+  "confidence": {
+    "supplier_name": 1.0,
+    "registration_no": 1.0,
+    "invoice_number": 1.0,
+    "issue_date_raw": 1.0,
+    "due_date_raw": 1.0,
+    "subtotal_raw": 1.0,
+    "tax_amount_raw": 1.0,
+    "total_amount_raw": 1.0,
+    "lines": 1.0
+  }
+}

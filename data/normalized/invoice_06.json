@@ -1,0 +1,43 @@
+{
+  "supplier_name": "株式会社サンプル商事",
+  "partner_code": null,
+  "partner_match_confidence": 0.0,
+  "invoice_number": "YM-2026-0122",
+  "issue_date": "2026-01-22",
+  "due_date": "2026-02-28",
+  "subtotal": 93000,
+  "tax_amount": 9300,
+  "total_amount": 102300,
+  "lines": [
+    {
+      "description": "表面処理加工",
+      "quantity": 200,
+      "unit": "個",
+      "unit_price": 340,
+      "amount": 68000,
+      "tax_code": "T10"
+    },
+    {
+      "description": "特急対応費",
+      "quantity": null,
+      "unit": "式",
+      "unit_price": null,
+      "amount": 25000,
+      "tax_code": "T10"
+    }
+  ],
+  "extraction_confidence": {
+    "supplier_name": 1.0,
+    "registration_no": 1.0,
+    "invoice_number": 1.0,
+    "issue_date_raw": 1.0,
+    "due_date_raw": 1.0,
+    "subtotal_raw": 1.0,
+    "tax_amount_raw": 1.0,
+    "total_amount_raw": 1.0,
+    "lines": 1.0
+  },
+  "normalisation_notes": [
+    "Could not match supplier '株式会社サンプル商事' to any partner."
+  ]
+}

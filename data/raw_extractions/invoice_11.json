@@ -1,0 +1,39 @@
+{
+  "supplier_name": "株式会社サンプル商事",
+  "registration_no": "T202000200202",
+  "invoice_number": "SATO-260205",
+  "issue_date_raw": "令和2年2月5日",
+  "due_date_raw": "令和8年3月31日",
+  "subtotal_raw": "113,700",
+  "tax_amount_raw": "11,370",
+  "total_amount_raw": "125,070",
+  "lines": [
+    {
+      "description": "清掃用品一式",
+      "quantity": 1,
+      "unit": "式",
+      "unit_price": 34500,
+      "amount": 34500,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "トイレットペーパー",
+      "quantity": 40,
+      "unit": "箱",
+      "unit_price": 1980,
+      "amount": 79200,
+      "tax_rate_hint": 0.1
+    }
+  ],
+  "confidence": {
+    "supplier_name": 1.0,
+    "registration_no": 1.0,
+    "invoice_number": 1.0,
+    "issue_date_raw": 1.0,
+    "due_date_raw": 1.0,
+    "subtotal_raw": 1.0,
+    "tax_amount_raw": 1.0,
+    "total_amount_raw": 1.0,
+    "lines": 1.0
+  }
+}

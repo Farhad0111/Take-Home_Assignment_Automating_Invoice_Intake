@@ -1,0 +1,43 @@
+{
+  "supplier_name": "東京フーズ株式会社",
+  "partner_code": null,
+  "partner_match_confidence": 0.0,
+  "invoice_number": "TF-2026-0125",
+  "issue_date": "2026-01-25",
+  "due_date": "2026-02-25",
+  "subtotal": 110000,
+  "tax_amount": 680,
+  "total_amount": 118936,
+  "lines": [
+    {
+      "description": "冷凍飲料セット",
+      "quantity": 12,
+      "unit": "箱",
+      "unit_price": 8600,
+      "amount": 103200,
+      "tax_code": "T08"
+    },
+    {
+      "description": "保冷配送料",
+      "quantity": null,
+      "unit": "式",
+      "unit_price": 6800,
+      "amount": 6800,
+      "tax_code": "T10"
+    }
+  ],
+  "extraction_confidence": {
+    "supplier_name": 1.0,
+    "registration_no": 1.0,
+    "invoice_number": 1.0,
+    "issue_date_raw": 1.0,
+    "due_date_raw": 1.0,
+    "subtotal_raw": 1.0,
+    "tax_amount_raw": 1.0,
+    "total_amount_raw": 1.0,
+    "lines": 1.0
+  },
+  "normalisation_notes": [
+    "Could not match supplier '東京フーズ株式会社' to any partner."
+  ]
+}

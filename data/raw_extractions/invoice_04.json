@@ -1,0 +1,39 @@
+{
+  "supplier_name": "有限会社佐藤商店",
+  "registration_no": "T202000200202",
+  "invoice_number": "SATO-260118",
+  "issue_date_raw": "2026/01/18",
+  "due_date_raw": "2026/03/31",
+  "subtotal_raw": "¥219,000",
+  "tax_amount_raw": "¥21,900",
+  "total_amount_raw": "¥240,900",
+  "lines": [
+    {
+      "description": "事務用品セット",
+      "quantity": 15,
+      "unit": "セット",
+      "unit_price": 4800,
+      "amount": 72000,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "コピー用紙 A4",
+      "quantity": 60,
+      "unit": "箱",
+      "unit_price": 2450,
+      "amount": 147000,
+      "tax_rate_hint": 0.1
+    }
+  ],
+  "confidence": {
+    "supplier_name": 1.0,
+    "registration_no": 1.0,
+    "invoice_number": 1.0,
+    "issue_date_raw": 1.0,
+    "due_date_raw": 1.0,
+    "subtotal_raw": 1.0,
+    "tax_amount_raw": 1.0,
+    "total_amount_raw": 1.0,
+    "lines": 1.0
+  }
+}

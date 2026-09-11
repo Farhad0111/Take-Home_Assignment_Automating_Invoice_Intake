@@ -1,0 +1,51 @@
+{
+  "supplier_name": "みらいITソリューションズ株式会社",
+  "partner_code": null,
+  "partner_match_confidence": 0.0,
+  "invoice_number": "MIT-2026-011",
+  "issue_date": "2026-01-20",
+  "due_date": "2026-02-28",
+  "subtotal": 397000,
+  "tax_amount": 39700,
+  "total_amount": 436700,
+  "lines": [
+    {
+      "description": "基幹システム保守(1月分)",
+      "quantity": 1,
+      "unit": "式",
+      "unit_price": 280000,
+      "amount": 280000,
+      "tax_code": "T10"
+    },
+    {
+      "description": "障害対応(時間外)",
+      "quantity": 6,
+      "unit": "時間",
+      "unit_price": 12000,
+      "amount": 72000,
+      "tax_code": "T10"
+    },
+    {
+      "description": "VPN回線利用料",
+      "quantity": 1,
+      "unit": "式",
+      "unit_price": 45000,
+      "amount": 45000,
+      "tax_code": "T10"
+    }
+  ],
+  "extraction_confidence": {
+    "supplier_name": 1.0,
+    "registration_no": 1.0,
+    "invoice_number": 1.0,
+    "issue_date_raw": 1.0,
+    "due_date_raw": 1.0,
+    "subtotal_raw": 1.0,
+    "tax_amount_raw": 1.0,
+    "total_amount_raw": 1.0,
+    "lines": 1.0
+  },
+  "normalisation_notes": [
+    "Could not match supplier 'みらいITソリューションズ株式会社' to any partner."
+  ]
+}

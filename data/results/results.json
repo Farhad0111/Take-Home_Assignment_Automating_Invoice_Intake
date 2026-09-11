@@ -1,0 +1,502 @@
+[
+  {
+    "source_file": "invoice_01.pdf",
+    "status": "NEEDS_REVIEW",
+    "invoice_number": "YM-2026-0107",
+    "supplier_name": "株式会社サンプル商事",
+    "partner_code": null,
+    "issue_date": "2026-01-07",
+    "due_date": "2026-02-28",
+    "subtotal": 304000,
+    "tax_amount": 30400,
+    "total_amount": 334400,
+    "lines": [
+      {
+        "description": "商品名・摘要",
+        "quantity": 120,
+        "unit": "個",
+        "unit_price": 1250,
+        "amount": 150000,
+        "tax_code": "T10"
+      },
+      {
+        "description": "商品名・摘要",
+        "quantity": 40,
+        "unit": "個",
+        "unit_price": 3000,
+        "amount": 136000,
+        "tax_code": "T10"
+      },
+      {
+        "description": "式",
+        "quantity": null,
+        "unit": "None",
+        "unit_price": null,
+        "amount": 18000,
+        "tax_code": "T10"
+      }
+    ],
+    "extraction_confidence": 0.8888888888888888,
+    "partner_match_confidence": 0.0,
+    "validation_status": "FAIL",
+    "validation_issues": [
+      {
+        "severity": "ERROR",
+        "code": "PARTNER_NOT_FOUND",
+        "message": "Supplier could not be matched to any partner in the master.",
+        "detail": null
+      }
+    ],
+    "disposition": "REVIEW",
+    "normalisation_notes": [
+      "Could not match supplier '株式会社サンプル商事' to any partner."
+    ],
+    "api_result": null,
+    "accounting_id": null
+  },
+  {
+    "source_file": "invoice_02.pdf",
+    "status": "EXTRACTION_FAILED",
+    "error": "JSON parse error: Expecting ',' delimiter: line 23 column 22 (char 553)"
+  },
+  {
+    "source_file": "invoice_03.pdf",
+    "status": "EXTRACTION_FAILED",
+    "error": "JSON parse error: Expecting ',' delimiter: line 15 column 22 (char 384)"
+  },
+  {
+    "source_file": "invoice_04.jpg",
+    "status": "NEEDS_REVIEW",
+    "invoice_number": "SATO-260118",
+    "supplier_name": "有限会社佐藤商店",
+    "partner_code": null,
+    "issue_date": "2026-01-18",
+    "due_date": "2026-03-31",
+    "subtotal": 219000,
+    "tax_amount": 21900,
+    "total_amount": 240900,
+    "lines": [
+      {
+        "description": "事務用品セット",
+        "quantity": 15,
+        "unit": "セット",
+        "unit_price": 4800,
+        "amount": 72000,
+        "tax_code": "T10"
+      },
+      {
+        "description": "コピー用紙 A4",
+        "quantity": 60,
+        "unit": "箱",
+        "unit_price": 2450,
+        "amount": 147000,
+        "tax_code": "T10"
+      }
+    ],
+    "extraction_confidence": 1.0,
+    "partner_match_confidence": 0.0,
+    "validation_status": "FAIL",
+    "validation_issues": [
+      {
+        "severity": "ERROR",
+        "code": "PARTNER_NOT_FOUND",
+        "message": "Supplier could not be matched to any partner in the master.",
+        "detail": null
+      }
+    ],
+    "disposition": "REVIEW",
+    "normalisation_notes": [
+      "Could not match supplier '有限会社佐藤商店' to any partner."
+    ],
+    "api_result": null,
+    "accounting_id": null
+  },
+  {
+    "source_file": "invoice_05.jpg",
+    "status": "NEEDS_REVIEW",
+    "invoice_number": "MIT-2026-011",
+    "supplier_name": "みらいITソリューションズ株式会社",
+    "partner_code": null,
+    "issue_date": "2026-01-20",
+    "due_date": "2026-02-28",
+    "subtotal": 397000,
+    "tax_amount": 39700,
+    "total_amount": 436700,
+    "lines": [
+      {
+        "description": "基幹システム保守(1月分)",
+        "quantity": 1,
+        "unit": "式",
+        "unit_price": 280000,
+        "amount": 280000,
+        "tax_code": "T10"
+      },
+      {
+        "description": "障害対応(時間外)",
+        "quantity": 6,
+        "unit": "時間",
+        "unit_price": 12000,
+        "amount": 72000,
+        "tax_code": "T10"
+      },
+      {
+        "description": "VPN回線利用料",
+        "quantity": 1,
+        "unit": "式",
+        "unit_price": 45000,
+        "amount": 45000,
+        "tax_code": "T10"
+      }
+    ],
+    "extraction_confidence": 1.0,
+    "partner_match_confidence": 0.0,
+    "validation_status": "FAIL",
+    "validation_issues": [
+      {
+        "severity": "ERROR",
+        "code": "PARTNER_NOT_FOUND",
+        "message": "Supplier could not be matched to any partner in the master.",
+        "detail": null
+      }
+    ],
+    "disposition": "REVIEW",
+    "normalisation_notes": [
+      "Could not match supplier 'みらいITソリューションズ株式会社' to any partner."
+    ],
+    "api_result": null,
+    "accounting_id": null
+  },
+  {
+    "source_file": "invoice_06.jpg",
+    "status": "NEEDS_REVIEW",
+    "invoice_number": "YM-2026-0122",
+    "supplier_name": "株式会社サンプル商事",
+    "partner_code": null,
+    "issue_date": "2026-01-22",
+    "due_date": "2026-02-28",
+    "subtotal": 93000,
+    "tax_amount": 9300,
+    "total_amount": 102300,
+    "lines": [
+      {
+        "description": "表面処理加工",
+        "quantity": 200,
+        "unit": "個",
+        "unit_price": 340,
+        "amount": 68000,
+        "tax_code": "T10"
+      },
+      {
+        "description": "特急対応費",
+        "quantity": null,
+        "unit": "式",
+        "unit_price": null,
+        "amount": 25000,
+        "tax_code": "T10"
+      }
+    ],
+    "extraction_confidence": 1.0,
+    "partner_match_confidence": 0.0,
+    "validation_status": "FAIL",
+    "validation_issues": [
+      {
+        "severity": "ERROR",
+        "code": "PARTNER_NOT_FOUND",
+        "message": "Supplier could not be matched to any partner in the master.",
+        "detail": null
+      }
+    ],
+    "disposition": "REVIEW",
+    "normalisation_notes": [
+      "Could not match supplier '株式会社サンプル商事' to any partner."
+    ],
+    "api_result": null,
+    "accounting_id": null
+  },
+  {
+    "source_file": "invoice_07.jpg",
+    "status": "NEEDS_REVIEW",
+    "invoice_number": "YM-2026-0107",
+    "supplier_name": "株式会社サンプル商事",
+    "partner_code": null,
+    "issue_date": "2026-01-07",
+    "due_date": "2026-02-28",
+    "subtotal": 304000,
+    "tax_amount": 30400,
+    "total_amount": 334400,
+    "lines": [
+      {
+        "description": "精密部品A-100",
+        "quantity": 120,
+        "unit": "個",
+        "unit_price": 1250,
+        "amount": 150000,
+        "tax_code": "T10"
+      },
+      {
+        "description": "精密部品A-220",
+        "quantity": 40,
+        "unit": "個",
+        "unit_price": 3400,
+        "amount": 136000,
+        "tax_code": "T10"
+      },
+      {
+        "description": "相包・輸送費",
+        "quantity": 40,
+        "unit": "式",
+        "unit_price": null,
+        "amount": 18000,
+        "tax_code": "T10"
+      }
+    ],
+    "extraction_confidence": 1.0,
+    "partner_match_confidence": 0.0,
+    "validation_status": "FAIL",
+    "validation_issues": [
+      {
+        "severity": "ERROR",
+        "code": "PARTNER_NOT_FOUND",
+        "message": "Supplier could not be matched to any partner in the master.",
+        "detail": null
+      }
+    ],
+    "disposition": "REVIEW",
+    "normalisation_notes": [
+      "Could not match supplier '株式会社サンプル商事' to any partner."
+    ],
+    "api_result": null,
+    "accounting_id": null
+  },
+  {
+    "source_file": "invoice_08.jpg",
+    "status": "NEEDS_REVIEW",
+    "invoice_number": "TF-2026-0125",
+    "supplier_name": "東京フーズ株式会社",
+    "partner_code": null,
+    "issue_date": "2026-01-25",
+    "due_date": "2026-02-25",
+    "subtotal": 110000,
+    "tax_amount": 680,
+    "total_amount": 118936,
+    "lines": [
+      {
+        "description": "冷凍飲料セット",
+        "quantity": 12,
+        "unit": "箱",
+        "unit_price": 8600,
+        "amount": 103200,
+        "tax_code": "T08"
+      },
+      {
+        "description": "保冷配送料",
+        "quantity": null,
+        "unit": "式",
+        "unit_price": 6800,
+        "amount": 6800,
+        "tax_code": "T10"
+      }
+    ],
+    "extraction_confidence": 1.0,
+    "partner_match_confidence": 0.0,
+    "validation_status": "FAIL",
+    "validation_issues": [
+      {
+        "severity": "ERROR",
+        "code": "PARTNER_NOT_FOUND",
+        "message": "Supplier could not be matched to any partner in the master.",
+        "detail": null
+      },
+      {
+        "severity": "ERROR",
+        "code": "TAX_MISMATCH",
+        "message": "Tax amount 680 ≠ recalculated tax 8936.",
+        "detail": "expected=8936, received=680"
+      },
+      {
+        "severity": "ERROR",
+        "code": "TOTAL_MISMATCH",
+        "message": "Total 118936 ≠ subtotal 110000 + tax 680 = 110680.",
+        "detail": null
+      }
+    ],
+    "disposition": "REVIEW",
+    "normalisation_notes": [
+      "Could not match supplier '東京フーズ株式会社' to any partner."
+    ],
+    "api_result": null,
+    "accounting_id": null
+  },
+  {
+    "source_file": "invoice_09.pdf",
+    "status": "NEEDS_REVIEW",
+    "invoice_number": "OSK-26-0128",
+    "supplier_name": "株式会社サンプル商事 経理部 御中",
+    "partner_code": null,
+    "issue_date": "2026-01-28",
+    "due_date": "2026-02-20",
+    "subtotal": 134088,
+    "tax_amount": 13408,
+    "total_amount": 147497,
+    "lines": [
+      {
+        "description": "シャフト加工",
+        "quantity": 37,
+        "unit": "個",
+        "unit_price": 2733,
+        "amount": 101121,
+        "tax_code": "T10"
+      },
+      {
+        "description": "熱処理",
+        "quantity": 37,
+        "unit": "個",
+        "unit_price": 891,
+        "amount": 32967,
+        "tax_code": "T10"
+      }
+    ],
+    "extraction_confidence": 1.0,
+    "partner_match_confidence": 0.0,
+    "validation_status": "FAIL",
+    "validation_issues": [
+      {
+        "severity": "ERROR",
+        "code": "PARTNER_NOT_FOUND",
+        "message": "Supplier could not be matched to any partner in the master.",
+        "detail": null
+      },
+      {
+        "severity": "ERROR",
+        "code": "TOTAL_MISMATCH",
+        "message": "Total 147497 ≠ subtotal 134088 + tax 13408 = 147496.",
+        "detail": null
+      }
+    ],
+    "disposition": "REVIEW",
+    "normalisation_notes": [
+      "Could not match supplier '株式会社サンプル商事 経理部 御中' to any partner."
+    ],
+    "api_result": null,
+    "accounting_id": null
+  },
+  {
+    "source_file": "invoice_10.jpg",
+    "status": "EXTRACTION_FAILED",
+    "error": "API call error: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-mini in organization org-PXtncaOT9yKvch46DnO46pWw on tokens per min (TPM): Limit 200000, Used 199930, Requested 1231. Please try again in 348ms. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_file": "invoice_11.jpg",
+    "status": "NEEDS_REVIEW",
+    "invoice_number": "SATO-260205",
+    "supplier_name": "株式会社サンプル商事",
+    "partner_code": null,
+    "issue_date": "2020-02-05",
+    "due_date": "2026-03-31",
+    "subtotal": 113700,
+    "tax_amount": 11370,
+    "total_amount": 125070,
+    "lines": [
+      {
+        "description": "清掃用品一式",
+        "quantity": 1,
+        "unit": "式",
+        "unit_price": 34500,
+        "amount": 34500,
+        "tax_code": "T10"
+      },
+      {
+        "description": "トイレットペーパー",
+        "quantity": 40,
+        "unit": "箱",
+        "unit_price": 1980,
+        "amount": 79200,
+        "tax_code": "T10"
+      }
+    ],
+    "extraction_confidence": 1.0,
+    "partner_match_confidence": 0.0,
+    "validation_status": "FAIL",
+    "validation_issues": [
+      {
+        "severity": "ERROR",
+        "code": "PARTNER_NOT_FOUND",
+        "message": "Supplier could not be matched to any partner in the master.",
+        "detail": null
+      }
+    ],
+    "disposition": "REVIEW",
+    "normalisation_notes": [
+      "Could not match supplier '株式会社サンプル商事' to any partner."
+    ],
+    "api_result": null,
+    "accounting_id": null
+  },
+  {
+    "source_file": "invoice_12.jpg",
+    "status": "NEEDS_REVIEW",
+    "invoice_number": "MT-2026-014",
+    "supplier_name": "みらいITソリューションズ株式会社",
+    "partner_code": null,
+    "issue_date": "2026-02-10",
+    "due_date": "2026-03-31",
+    "subtotal": 540000,
+    "tax_amount": 54000,
+    "total_amount": 594000,
+    "lines": [
+      {
+        "description": "業務システム改修",
+        "quantity": 1,
+        "unit": "式",
+        "unit_price": 450000,
+        "amount": 450000,
+        "tax_code": "T10"
+      },
+      {
+        "description": "追加ライセンス",
+        "quantity": 5,
+        "unit": "本",
+        "unit_price": 24000,
+        "amount": 120000,
+        "tax_code": "T10"
+      },
+      {
+        "description": "値引き",
+        "quantity": 1,
+        "unit": "式",
+        "unit_price": 30000,
+        "amount": 30000,
+        "tax_code": "T10"
+      }
+    ],
+    "extraction_confidence": 1.0,
+    "partner_match_confidence": 0.0,
+    "validation_status": "FAIL",
+    "validation_issues": [
+      {
+        "severity": "ERROR",
+        "code": "PARTNER_NOT_FOUND",
+        "message": "Supplier could not be matched to any partner in the master.",
+        "detail": null
+      },
+      {
+        "severity": "ERROR",
+        "code": "SUBTOTAL_MISMATCH",
+        "message": "Subtotal 540000 ≠ sum of line amounts 600000.",
+        "detail": "expected=600000, received=540000"
+      },
+      {
+        "severity": "ERROR",
+        "code": "TAX_MISMATCH",
+        "message": "Tax amount 54000 ≠ recalculated tax 60000.",
+        "detail": "expected=60000, received=54000"
+      }
+    ],
+    "disposition": "REVIEW",
+    "normalisation_notes": [
+      "Could not match supplier 'みらいITソリューションズ株式会社' to any partner."
+    ],
+    "api_result": null,
+    "accounting_id": null
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "supplier_name": "株式会社サンプル商事",
+  "registration_no": "T101000100101",
+  "invoice_number": "YM-2026-0122",
+  "issue_date_raw": "2026年1月22日",
+  "due_date_raw": "2026年2月28日",
+  "subtotal_raw": "93,000",
+  "tax_amount_raw": "9,300",
+  "total_amount_raw": "102,300",
+  "lines": [
+    {
+      "description": "表面処理加工",
+      "quantity": 200,
+      "unit": "個",
+      "unit_price": 340,
+      "amount": 68000,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "特急対応費",
+      "quantity": null,
+      "unit": "式",
+      "unit_price": null,
+      "amount": 25000,
+      "tax_rate_hint": null
+    }
+  ],
+  "confidence": {
+    "supplier_name": 1.0,
+    "registration_no": 1.0,
+    "invoice_number": 1.0,
+    "issue_date_raw": 1.0,
+    "due_date_raw": 1.0,
+    "subtotal_raw": 1.0,
+    "tax_amount_raw": 1.0,
+    "total_amount_raw": 1.0,
+    "lines": 1.0
+  }
+}
