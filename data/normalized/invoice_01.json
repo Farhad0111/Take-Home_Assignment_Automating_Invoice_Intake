@@ -10,7 +10,7 @@
   "total_amount": 334400,
   "lines": [
     {
-      "description": "商品名・摘要",
+      "description": "精密部品A-100",
       "quantity": 120,
       "unit": "個",
       "unit_price": 1250,
@@ -18,25 +18,25 @@
       "tax_code": "T10"
     },
     {
-      "description": "商品名・摘要",
+      "description": "精密部品B-220",
       "quantity": 40,
       "unit": "個",
-      "unit_price": 3000,
+      "unit_price": 3400,
       "amount": 136000,
       "tax_code": "T10"
     },
     {
-      "description": "式",
-      "quantity": null,
-      "unit": "None",
-      "unit_price": null,
+      "description": "梱包・輸送費",
+      "quantity": 0,
+      "unit": "式",
+      "unit_price": 0,
       "amount": 18000,
       "tax_code": "T10"
     }
   ],
   "extraction_confidence": {
     "supplier_name": 1.0,
-    "registration_no": 0.0,
+    "registration_no": 1.0,
     "invoice_number": 1.0,
     "issue_date_raw": 1.0,
     "due_date_raw": 1.0,

@@ -22,7 +22,7 @@
       "unit": "時間",
       "unit_price": 12000,
       "amount": 72000,
-      "tax_rate_hint": 0.1
+      "tax_rate_hint": null
     },
     {
       "description": "VPN回線利用料",
@@ -30,7 +30,7 @@
       "unit": "式",
       "unit_price": 45000,
       "amount": 45000,
-      "tax_rate_hint": 0.1
+      "tax_rate_hint": null
     }
   ],
   "confidence": {

@@ -1,0 +1,231 @@
+{
+  "supplier_name": "大阪機械工業株式会社",
+  "registration_no": "T4400004000404",
+  "invoice_number": "OSK-26-0112",
+  "issue_date_raw": "2026年1月12日",
+  "due_date_raw": "2026年2月20日",
+  "subtotal_raw": "1,419,080",
+  "tax_amount_raw": "141,908",
+  "total_amount_raw": "1,560,988",
+  "lines": [
+    {
+      "description": "治具部材 No.001",
+      "quantity": 6,
+      "unit": "個",
+      "unit_price": 930,
+      "amount": 5580,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "治具部材 No.002",
+      "quantity": 7,
+      "unit": "個",
+      "unit_price": 1060,
+      "amount": 7420,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "治具部材 No.003",
+      "quantity": 8,
+      "unit": "個",
+      "unit_price": 1190,
+      "amount": 9520,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "治具部材 No.004",
+      "quantity": 9,
+      "unit": "個",
+      "unit_price": 1320,
+      "amount": 11880,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "治具部材 No.005",
+      "quantity": 10,
+      "unit": "個",
+      "unit_price": 1450,
+      "amount": 14500,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "治具部材 No.006",
+      "quantity": 11,
+      "unit": "個",
+      "unit_price": 1580,
+      "amount": 17380,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "治具部材 No.007",
+      "quantity": 12,
+      "unit": "個",
+      "unit_price": 1710,
+      "amount": 20520,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "治具部材 No.008",
+      "quantity": 13,
+      "unit": "個",
+      "unit_price": 1840,
+      "amount": 23920,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "治具部材 No.009",
+      "quantity": 14,
+      "unit": "個",
+      "unit_price": 1970,
+      "amount": 27580,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "治具部材 No.010",
+      "quantity": 15,
+      "unit": "個",
+      "unit_price": 2100,
+      "amount": 31500,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "治具部材 No.011",
+      "quantity": 16,
+      "unit": "個",
+      "unit_price": 2230,
+      "amount": 35680,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "治具部材 No.012",
+      "quantity": 17,
+      "unit": "個",
+      "unit_price": 2360,
+      "amount": 40120,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "治具部材 No.013",
+      "quantity": 18,
+      "unit": "個",
+      "unit_price": 2490,
+      "amount": 44420,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "治具部材 No.014",
+      "quantity": 19,
+      "unit": "個",
+      "unit_price": 2620,
+      "amount": 49780,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "治具部材 No.015",
+      "quantity": 20,
+      "unit": "個",
+      "unit_price": 2750,
+      "amount": 55000,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "治具部材 No.016",
+      "quantity": 21,
+      "unit": "個",
+      "unit_price": 2880,
+      "amount": 60480,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "治具部材 No.017",
+      "quantity": 22,
+      "unit": "個",
+      "unit_price": 3010,
+      "amount": 66220,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "治具部材 No.018",
+      "quantity": 23,
+      "unit": "個",
+      "unit_price": 3140,
+      "amount": 72220,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "治具部材 No.019",
+      "quantity": 24,
+      "unit": "個",
+      "unit_price": 3270,
+      "amount": 78480,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "治具部材 No.020",
+      "quantity": 25,
+      "unit": "個",
+      "unit_price": 3400,
+      "amount": 85000,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "治具部材 No.021",
+      "quantity": 26,
+      "unit": "個",
+      "unit_price": 3530,
+      "amount": 91780,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "治具部材 No.022",
+      "quantity": 27,
+      "unit": "個",
+      "unit_price": 3660,
+      "amount": 98820,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "治具部材 No.023",
+      "quantity": 28,
+      "unit": "個",
+      "unit_price": 3790,
+      "amount": 106120,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "治具部材 No.024",
+      "quantity": 29,
+      "unit": "個",
+      "unit_price": 3920,
+      "amount": 113680,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "治具部材 No.025",
+      "quantity": 30,
+      "unit": "個",
+      "unit_price": 4050,
+      "amount": 121500,
+      "tax_rate_hint": 0.1
+    },
+    {
+      "description": "治具部材 No.026",
+      "quantity": 31,
+      "unit": "個",
+      "unit_price": 4180,
+      "amount": 129580,
+      "tax_rate_hint": 0.1
+    }
+  ],
+  "confidence": {
+    "supplier_name": 1.0,
+    "registration_no": 1.0,
+    "invoice_number": 1.0,
+    "issue_date_raw": 1.0,
+    "due_date_raw": 1.0,
+    "subtotal_raw": 1.0,
+    "tax_amount_raw": 1.0,
+    "total_amount_raw": 1.0,
+    "lines": 1.0
+  }
+}

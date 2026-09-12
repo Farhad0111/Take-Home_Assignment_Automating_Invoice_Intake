@@ -196,6 +196,8 @@ invoices/ (PDF / JPG)
 │   Multimodal LLM           │  GPT-4o-mini vision (temperature=0)
 │   Document Extraction      │  Returns structured JSON + per-field
 │                            │  confidence score (0.0 – 1.0)
+│                            │  JSON repair on parse failure
+│                            │  Retry up to 3 times
 │ Supplier / Invoice / Dates │
 │ Lines / Amounts / Tax      │
 │ Confidence                 │

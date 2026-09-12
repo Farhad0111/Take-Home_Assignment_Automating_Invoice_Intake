@@ -1,6 +1,6 @@
 {
   "supplier_name": "株式会社サンプル商事",
-  "registration_no": null,
+  "registration_no": "T1010001000101",
   "invoice_number": "YM-2026-0107",
   "issue_date_raw": "2026年1月7日",
   "due_date_raw": "2026年2月28日",
@@ -9,7 +9,7 @@
   "total_amount_raw": "334,400",
   "lines": [
     {
-      "description": "商品名・摘要",
+      "description": "精密部品A-100",
       "quantity": 120,
       "unit": "個",
       "unit_price": 1250,
@@ -17,25 +17,25 @@
       "tax_rate_hint": 0.1
     },
     {
-      "description": "商品名・摘要",
+      "description": "精密部品B-220",
       "quantity": 40,
       "unit": "個",
-      "unit_price": 3000,
+      "unit_price": 3400,
       "amount": 136000,
       "tax_rate_hint": 0.1
     },
     {
-      "description": "式",
-      "quantity": null,
-      "unit": "None",
-      "unit_price": null,
+      "description": "梱包・輸送費",
+      "quantity": 0,
+      "unit": "式",
+      "unit_price": 0,
       "amount": 18000,
       "tax_rate_hint": null
     }
   ],
   "confidence": {
     "supplier_name": 1.0,
-    "registration_no": 0.0,
+    "registration_no": 1.0,
     "invoice_number": 1.0,
     "issue_date_raw": 1.0,
     "due_date_raw": 1.0,
