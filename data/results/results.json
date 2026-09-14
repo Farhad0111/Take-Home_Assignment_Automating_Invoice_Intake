@@ -324,7 +324,7 @@
         "tax_code": "T10"
       },
       {
-        "description": "ミネラルウォーター2L",
+        "description": "ミネラルウォーター 2L",
         "quantity": 48,
         "unit": "本",
         "unit_price": 180,
@@ -362,8 +362,8 @@
     "source_file": "invoice_04.jpg",
     "status": "NEEDS_REVIEW",
     "invoice_number": "SATO-260118",
-    "supplier_name": "有限会社佐藤商店",
-    "partner_code": "P-1002",
+    "supplier_name": "株式会社サンプル商事",
+    "partner_code": null,
     "issue_date": "2026-01-18",
     "due_date": "2026-03-31",
     "subtotal": 219000,
@@ -388,18 +388,20 @@
       }
     ],
     "extraction_confidence": 1.0,
-    "partner_match_confidence": 1.0,
+    "partner_match_confidence": 0.0,
     "validation_status": "FAIL",
     "validation_issues": [
       {
         "severity": "ERROR",
-        "code": "DUPLICATE_INVOICE",
-        "message": "Invoice SATO-260118 is already registered for partner P-1002.",
+        "code": "PARTNER_NOT_FOUND",
+        "message": "Supplier could not be matched to any partner in the master.",
         "detail": null
       }
     ],
     "disposition": "REVIEW",
-    "normalisation_notes": [],
+    "normalisation_notes": [
+      "Could not match supplier '株式会社サンプル商事' to any partner."
+    ],
     "api_result": null,
     "accounting_id": null
   },
@@ -562,8 +564,8 @@
     "source_file": "invoice_08.jpg",
     "status": "NEEDS_REVIEW",
     "invoice_number": "TF-2026-0125",
-    "supplier_name": "東京フーズ株式会社",
-    "partner_code": "P-1003",
+    "supplier_name": "株式会社サンプル商事 経理部 御中",
+    "partner_code": null,
     "issue_date": "2026-01-25",
     "due_date": "2026-02-25",
     "subtotal": 110000,
@@ -588,9 +590,15 @@
       }
     ],
     "extraction_confidence": 1.0,
-    "partner_match_confidence": 1.0,
+    "partner_match_confidence": 0.0,
     "validation_status": "FAIL",
     "validation_issues": [
+      {
+        "severity": "ERROR",
+        "code": "PARTNER_NOT_FOUND",
+        "message": "Supplier could not be matched to any partner in the master.",
+        "detail": null
+      },
       {
         "severity": "ERROR",
         "code": "TAX_MISMATCH",
@@ -605,7 +613,9 @@
       }
     ],
     "disposition": "REVIEW",
-    "normalisation_notes": [],
+    "normalisation_notes": [
+      "Could not match supplier '株式会社サンプル商事 経理部 御中' to any partner."
+    ],
     "api_result": null,
     "accounting_id": null
   },
@@ -613,7 +623,7 @@
     "source_file": "invoice_09.pdf",
     "status": "NEEDS_REVIEW",
     "invoice_number": "OSK-26-0128",
-    "supplier_name": "株式会社サンプル商事 経理部 御中",
+    "supplier_name": "株式会社サンプル商事",
     "partner_code": null,
     "issue_date": "2026-01-28",
     "due_date": "2026-02-20",
@@ -638,7 +648,7 @@
         "tax_code": "T10"
       }
     ],
-    "extraction_confidence": 1.0,
+    "extraction_confidence": 0.8888888888888888,
     "partner_match_confidence": 0.0,
     "validation_status": "FAIL",
     "validation_issues": [
@@ -657,7 +667,7 @@
     ],
     "disposition": "REVIEW",
     "normalisation_notes": [
-      "Could not match supplier '株式会社サンプル商事 経理部 御中' to any partner."
+      "Could not match supplier '株式会社サンプル商事' to any partner."
     ],
     "api_result": null,
     "accounting_id": null
@@ -675,7 +685,7 @@
     "total_amount": 214280,
     "lines": [
       {
-        "description": "倉庫保管料（1月分）",
+        "description": "倉庫保管料（1ヶ月分）",
         "quantity": 1,
         "unit": "式",
         "unit_price": 120000,
