@@ -4,7 +4,7 @@
     "status": "NEEDS_REVIEW",
     "invoice_number": "YM-2026-0107",
     "supplier_name": "株式会社サンプル商事",
-    "partner_code": null,
+    "partner_code": "P-1001",
     "issue_date": "2026-01-07",
     "due_date": "2026-02-28",
     "subtotal": 304000,
@@ -37,20 +37,18 @@
       }
     ],
     "extraction_confidence": 1.0,
-    "partner_match_confidence": 0.0,
+    "partner_match_confidence": 0.9,
     "validation_status": "FAIL",
     "validation_issues": [
       {
         "severity": "ERROR",
-        "code": "PARTNER_NOT_FOUND",
-        "message": "Supplier could not be matched to any partner in the master.",
+        "code": "DUPLICATE_INVOICE",
+        "message": "Invoice YM-2026-0107 is already registered for partner P-1001.",
         "detail": null
       }
     ],
     "disposition": "REVIEW",
-    "normalisation_notes": [
-      "Could not match supplier '株式会社サンプル商事' to any partner."
-    ],
+    "normalisation_notes": [],
     "api_result": null,
     "accounting_id": null
   },
@@ -59,7 +57,7 @@
     "status": "NEEDS_REVIEW",
     "invoice_number": "OSK-26-0112",
     "supplier_name": "大阪機械工業株式会社",
-    "partner_code": null,
+    "partner_code": "P-1004",
     "issue_date": "2026-01-12",
     "due_date": "2026-02-20",
     "subtotal": 1419080,
@@ -276,15 +274,9 @@
       }
     ],
     "extraction_confidence": 1.0,
-    "partner_match_confidence": 0.0,
+    "partner_match_confidence": 1.0,
     "validation_status": "FAIL",
     "validation_issues": [
-      {
-        "severity": "ERROR",
-        "code": "PARTNER_NOT_FOUND",
-        "message": "Supplier could not be matched to any partner in the master.",
-        "detail": null
-      },
       {
         "severity": "ERROR",
         "code": "SUBTOTAL_MISMATCH",
@@ -299,9 +291,7 @@
       }
     ],
     "disposition": "REVIEW",
-    "normalisation_notes": [
-      "Could not match supplier '大阪機械工業株式会社' to any partner."
-    ],
+    "normalisation_notes": [],
     "api_result": null,
     "accounting_id": null
   },
@@ -309,7 +299,7 @@
     "source_file": "invoice_03.pdf",
     "status": "NEEDS_REVIEW",
     "invoice_number": "TF-2026-0115",
-    "supplier_name": "株式会社サンプル商事 経理部 御中",
+    "supplier_name": "株式会社サンプル商事",
     "partner_code": null,
     "issue_date": "2026-01-15",
     "due_date": "2026-02-15",
@@ -334,7 +324,7 @@
         "tax_code": "T10"
       },
       {
-        "description": "ミネラルウォーター 2L",
+        "description": "ミネラルウォーター2L",
         "quantity": 48,
         "unit": "本",
         "unit_price": 180,
@@ -363,7 +353,7 @@
     ],
     "disposition": "REVIEW",
     "normalisation_notes": [
-      "Could not match supplier '株式会社サンプル商事 経理部 御中' to any partner."
+      "Could not match supplier '株式会社サンプル商事' to any partner."
     ],
     "api_result": null,
     "accounting_id": null
@@ -373,7 +363,7 @@
     "status": "NEEDS_REVIEW",
     "invoice_number": "SATO-260118",
     "supplier_name": "有限会社佐藤商店",
-    "partner_code": null,
+    "partner_code": "P-1002",
     "issue_date": "2026-01-18",
     "due_date": "2026-03-31",
     "subtotal": 219000,
@@ -398,20 +388,18 @@
       }
     ],
     "extraction_confidence": 1.0,
-    "partner_match_confidence": 0.0,
+    "partner_match_confidence": 1.0,
     "validation_status": "FAIL",
     "validation_issues": [
       {
         "severity": "ERROR",
-        "code": "PARTNER_NOT_FOUND",
-        "message": "Supplier could not be matched to any partner in the master.",
+        "code": "DUPLICATE_INVOICE",
+        "message": "Invoice SATO-260118 is already registered for partner P-1002.",
         "detail": null
       }
     ],
     "disposition": "REVIEW",
-    "normalisation_notes": [
-      "Could not match supplier '有限会社佐藤商店' to any partner."
-    ],
+    "normalisation_notes": [],
     "api_result": null,
     "accounting_id": null
   },
@@ -420,7 +408,7 @@
     "status": "NEEDS_REVIEW",
     "invoice_number": "MIT-2026-011",
     "supplier_name": "みらいITソリューションズ株式会社",
-    "partner_code": null,
+    "partner_code": "P-1005",
     "issue_date": "2026-01-20",
     "due_date": "2026-02-28",
     "subtotal": 397000,
@@ -453,20 +441,18 @@
       }
     ],
     "extraction_confidence": 1.0,
-    "partner_match_confidence": 0.0,
+    "partner_match_confidence": 1.0,
     "validation_status": "FAIL",
     "validation_issues": [
       {
         "severity": "ERROR",
-        "code": "PARTNER_NOT_FOUND",
-        "message": "Supplier could not be matched to any partner in the master.",
+        "code": "DUPLICATE_INVOICE",
+        "message": "Invoice MIT-2026-011 is already registered for partner P-1005.",
         "detail": null
       }
     ],
     "disposition": "REVIEW",
-    "normalisation_notes": [
-      "Could not match supplier 'みらいITソリューションズ株式会社' to any partner."
-    ],
+    "normalisation_notes": [],
     "api_result": null,
     "accounting_id": null
   },
@@ -499,7 +485,7 @@
         "tax_code": "T10"
       }
     ],
-    "extraction_confidence": 0.8888888888888888,
+    "extraction_confidence": 1.0,
     "partner_match_confidence": 0.0,
     "validation_status": "FAIL",
     "validation_issues": [
@@ -577,7 +563,7 @@
     "status": "NEEDS_REVIEW",
     "invoice_number": "TF-2026-0125",
     "supplier_name": "東京フーズ株式会社",
-    "partner_code": null,
+    "partner_code": "P-1003",
     "issue_date": "2026-01-25",
     "due_date": "2026-02-25",
     "subtotal": 110000,
@@ -602,15 +588,9 @@
       }
     ],
     "extraction_confidence": 1.0,
-    "partner_match_confidence": 0.0,
+    "partner_match_confidence": 1.0,
     "validation_status": "FAIL",
     "validation_issues": [
-      {
-        "severity": "ERROR",
-        "code": "PARTNER_NOT_FOUND",
-        "message": "Supplier could not be matched to any partner in the master.",
-        "detail": null
-      },
       {
         "severity": "ERROR",
         "code": "TAX_MISMATCH",
@@ -625,9 +605,7 @@
       }
     ],
     "disposition": "REVIEW",
-    "normalisation_notes": [
-      "Could not match supplier '東京フーズ株式会社' to any partner."
-    ],
+    "normalisation_notes": [],
     "api_result": null,
     "accounting_id": null
   },
@@ -686,35 +664,30 @@
   },
   {
     "source_file": "invoice_10.jpg",
-    "status": "EXTRACTION_FAILED",
-    "error": "Extraction failed after 3 attempts. Last error: API call error (attempt 3/3): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-mini in organization org-PXtncaOT9yKvch46DnO46pWw on tokens per min (TPM): Limit 200000, Used 200000, Requested 1231. Please try again in 369ms. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
-  },
-  {
-    "source_file": "invoice_11.jpg",
     "status": "NEEDS_REVIEW",
-    "invoice_number": "SATO-260205",
-    "supplier_name": "株式会社サンプル商事",
+    "invoice_number": "SSL-2026-0203",
+    "supplier_name": "新星ロジスティクス株式会社",
     "partner_code": null,
-    "issue_date": "2020-02-05",
+    "issue_date": "2026-02-03",
     "due_date": "2026-03-31",
-    "subtotal": 113700,
-    "tax_amount": 11370,
-    "total_amount": 125070,
+    "subtotal": 194800,
+    "tax_amount": 19480,
+    "total_amount": 214280,
     "lines": [
       {
-        "description": "清掃用品一式",
+        "description": "倉庫保管料（1月分）",
         "quantity": 1,
         "unit": "式",
-        "unit_price": 34500,
-        "amount": 34500,
+        "unit_price": 120000,
+        "amount": 120000,
         "tax_code": "T10"
       },
       {
-        "description": "トイレットペーパー",
-        "quantity": 40,
-        "unit": "箱",
-        "unit_price": 1980,
-        "amount": 79200,
+        "description": "入出庫作業",
+        "quantity": 340,
+        "unit": "件",
+        "unit_price": 220,
+        "amount": 74800,
         "tax_code": "T10"
       }
     ],
@@ -731,17 +704,22 @@
     ],
     "disposition": "REVIEW",
     "normalisation_notes": [
-      "Could not match supplier '株式会社サンプル商事' to any partner."
+      "Could not match supplier '新星ロジスティクス株式会社' to any partner."
     ],
     "api_result": null,
     "accounting_id": null
+  },
+  {
+    "source_file": "invoice_11.jpg",
+    "status": "EXTRACTION_FAILED",
+    "error": "Extraction failed after 3 attempts. Last error: API call error (attempt 3/3): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-mini in organization org-PXtncaOT9yKvch46DnO46pWw on tokens per min (TPM): Limit 200000, Used 200000, Requested 1231. Please try again in 369ms. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
   },
   {
     "source_file": "invoice_12.jpg",
     "status": "NEEDS_REVIEW",
     "invoice_number": "MT-2026-014",
     "supplier_name": "みらいITソリューションズ株式会社",
-    "partner_code": null,
+    "partner_code": "P-1005",
     "issue_date": "2026-02-10",
     "due_date": "2026-03-31",
     "subtotal": 540000,
@@ -774,15 +752,9 @@
       }
     ],
     "extraction_confidence": 1.0,
-    "partner_match_confidence": 0.0,
+    "partner_match_confidence": 1.0,
     "validation_status": "FAIL",
     "validation_issues": [
-      {
-        "severity": "ERROR",
-        "code": "PARTNER_NOT_FOUND",
-        "message": "Supplier could not be matched to any partner in the master.",
-        "detail": null
-      },
       {
         "severity": "ERROR",
         "code": "SUBTOTAL_MISMATCH",
@@ -797,9 +769,7 @@
       }
     ],
     "disposition": "REVIEW",
-    "normalisation_notes": [
-      "Could not match supplier 'みらいITソリューションズ株式会社' to any partner."
-    ],
+    "normalisation_notes": [],
     "api_result": null,
     "accounting_id": null
   }

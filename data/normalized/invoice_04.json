@@ -1,7 +1,7 @@
 {
   "supplier_name": "有限会社佐藤商店",
-  "partner_code": null,
-  "partner_match_confidence": 0.0,
+  "partner_code": "P-1002",
+  "partner_match_confidence": 1.0,
   "invoice_number": "SATO-260118",
   "issue_date": "2026-01-18",
   "due_date": "2026-03-31",
@@ -37,7 +37,5 @@
     "total_amount_raw": 1.0,
     "lines": 1.0
   },
-  "normalisation_notes": [
-    "Could not match supplier '有限会社佐藤商店' to any partner."
-  ]
+  "normalisation_notes": []
 }

@@ -1,5 +1,5 @@
 {
-  "supplier_name": "株式会社サンプル商事 経理部 御中",
+  "supplier_name": "株式会社サンプル商事",
   "registration_no": "T303000300303",
   "invoice_number": "TF-2026-0115",
   "issue_date_raw": "2026年1月15日",
@@ -25,7 +25,7 @@
       "tax_rate_hint": 0.1
     },
     {
-      "description": "ミネラルウォーター 2L",
+      "description": "ミネラルウォーター2L",
       "quantity": 48,
       "unit": "本",
       "unit_price": 180,

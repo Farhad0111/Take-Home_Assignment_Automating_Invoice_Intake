@@ -1,5 +1,4 @@
 openai>=1.30
-flask>=3.0
 python-dotenv>=1.0
 pypdf>=4.0
 pillow>=10.0

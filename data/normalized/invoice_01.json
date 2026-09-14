@@ -1,7 +1,7 @@
 {
   "supplier_name": "株式会社サンプル商事",
-  "partner_code": null,
-  "partner_match_confidence": 0.0,
+  "partner_code": "P-1001",
+  "partner_match_confidence": 0.9,
   "invoice_number": "YM-2026-0107",
   "issue_date": "2026-01-07",
   "due_date": "2026-02-28",
@@ -45,7 +45,5 @@
     "total_amount_raw": 1.0,
     "lines": 1.0
   },
-  "normalisation_notes": [
-    "Could not match supplier '株式会社サンプル商事' to any partner."
-  ]
+  "normalisation_notes": []
 }

@@ -1,7 +1,7 @@
 {
   "supplier_name": "大阪機械工業株式会社",
-  "partner_code": null,
-  "partner_match_confidence": 0.0,
+  "partner_code": "P-1004",
+  "partner_match_confidence": 1.0,
   "invoice_number": "OSK-26-0112",
   "issue_date": "2026-01-12",
   "due_date": "2026-02-20",
@@ -229,7 +229,5 @@
     "total_amount_raw": 1.0,
     "lines": 1.0
   },
-  "normalisation_notes": [
-    "Could not match supplier '大阪機械工業株式会社' to any partner."
-  ]
+  "normalisation_notes": []
 }

@@ -28,7 +28,7 @@
   ],
   "extraction_confidence": {
     "supplier_name": 1.0,
-    "registration_no": 0.0,
+    "registration_no": 1.0,
     "invoice_number": 1.0,
     "issue_date_raw": 1.0,
     "due_date_raw": 1.0,

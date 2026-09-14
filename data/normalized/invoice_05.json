@@ -1,7 +1,7 @@
 {
   "supplier_name": "みらいITソリューションズ株式会社",
-  "partner_code": null,
-  "partner_match_confidence": 0.0,
+  "partner_code": "P-1005",
+  "partner_match_confidence": 1.0,
   "invoice_number": "MIT-2026-011",
   "issue_date": "2026-01-20",
   "due_date": "2026-02-28",
@@ -45,7 +45,5 @@
     "total_amount_raw": 1.0,
     "lines": 1.0
   },
-  "normalisation_notes": [
-    "Could not match supplier 'みらいITソリューションズ株式会社' to any partner."
-  ]
+  "normalisation_notes": []
 }
