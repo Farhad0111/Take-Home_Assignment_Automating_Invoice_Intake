@@ -1,5 +1,5 @@
 {
-  "supplier_name": "株式会社サンプル商事",
+  "supplier_name": "有限会社佐藤商店",
   "partner_code": null,
   "partner_match_confidence": 0.0,
   "invoice_number": "SATO-260118",
@@ -38,6 +38,6 @@
     "lines": 1.0
   },
   "normalisation_notes": [
-    "Could not match supplier '株式会社サンプル商事' to any partner."
+    "Could not match supplier '有限会社佐藤商店' to any partner."
   ]
 }

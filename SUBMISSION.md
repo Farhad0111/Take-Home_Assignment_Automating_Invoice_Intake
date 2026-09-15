@@ -1,6 +1,6 @@
 # Submission
 
-- Name: Farhad
+- Name: Md. Farhad Billah
 - Submission date (YYYY-MM-DD): 2026-09-15
 - Hours actually spent: ~8
 - Repository / how to run it: See instructions below

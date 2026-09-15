@@ -1,5 +1,5 @@
 {
-  "supplier_name": "株式会社サンプル商事 経理部 御中",
+  "supplier_name": "東京フーズ株式会社",
   "partner_code": null,
   "partner_match_confidence": 0.0,
   "invoice_number": "TF-2026-0125",
@@ -38,6 +38,6 @@
     "lines": 1.0
   },
   "normalisation_notes": [
-    "Could not match supplier '株式会社サンプル商事 経理部 御中' to any partner."
+    "Could not match supplier '東京フーズ株式会社' to any partner."
   ]
 }

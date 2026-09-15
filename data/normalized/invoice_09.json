@@ -1,5 +1,5 @@
 {
-  "supplier_name": "株式会社サンプル商事",
+  "supplier_name": "株式会社サンプル商事 経理部 御中",
   "partner_code": null,
   "partner_match_confidence": 0.0,
   "invoice_number": "OSK-26-0128",
@@ -28,7 +28,7 @@
   ],
   "extraction_confidence": {
     "supplier_name": 1.0,
-    "registration_no": 0.0,
+    "registration_no": 1.0,
     "invoice_number": 1.0,
     "issue_date_raw": 1.0,
     "due_date_raw": 1.0,
@@ -38,6 +38,6 @@
     "lines": 1.0
   },
   "normalisation_notes": [
-    "Could not match supplier '株式会社サンプル商事' to any partner."
+    "Could not match supplier '株式会社サンプル商事 経理部 御中' to any partner."
   ]
 }

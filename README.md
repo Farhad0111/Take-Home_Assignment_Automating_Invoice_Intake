@@ -121,6 +121,9 @@ The startup health check currently probes `http://localhost:8080/health` directl
 
 ## Pipeline Architecture
 
+
+![Invoice intake pipeline](Demo/Pipeline%20Architecture/Pipeline%20Architecture.png)
+
 ```
 invoices/ (PDF / JPG)
      │
