@@ -1,7 +1,7 @@
 # Submission
 
 - Name: Farhad
-- Submission date (YYYY-MM-DD): 2026-09-11
+- Submission date (YYYY-MM-DD): 2026-09-15
 - Hours actually spent: ~8
 - Repository / how to run it: See instructions below
 
@@ -92,8 +92,12 @@ Finally, I did not add multi-currency support because the accounting API only ac
 
 **Flow, end to end:**
 
+![Invoice intake pipeline](Demo/Pipeline%20Architecture/Pipeline%20Architecture.png)
+
+**Key technology decisions:**
+
 ```
-      invoices/ (PDF / JPG)
+      invoices (PDF / JPG)
              │
              ▼
 ┌────────────────────────────┐
@@ -172,10 +176,10 @@ PASS + HIGH CONF.  WARNING / FAIL
 **LLM choice — GPT-4o-mini:** The client provided an OpenAI key. gpt-4o-mini supports vision, returns structured JSON reliably at temperature=0, and costs ~$0.15/M input tokens — roughly $0.003 per invoice at the image sizes we send.
 
 ---
-----------------------------------------------------xxxxxx---------------------------------------------------------------------------
+
 ## 5. How I used AI, and how I checked it
 
-**What I delegated to AI**
+**What you delegated to AI**
 
 The LLM does one thing: look at the invoice image and return a JSON blob with the field values and a confidence score for each. It handles:
 - Reading Japanese text (kanji, katakana, hiragana)
@@ -184,7 +188,7 @@ The LLM does one thing: look at the invoice image and return a JSON blob with th
 
 Everything else is deterministic Python: the LLM output feeds into code I can unit-test, reason about, and fix without re-prompting.
 
-**How I verified the output**
+**How you verified the output**
 
 Three layers of verification:
 1. **Structural**: The JSON is parsed into typed dataclasses; malformed output produces `success=False` immediately.
@@ -207,50 +211,56 @@ Key constraints handled:
 
 | Invoice | Result | How I handled it |
 |---|---|---|
-| invoice_01.pdf | Registered (auto) | PDF text layer; high confidence extraction |
-| invoice_02.pdf | Registered (auto) | PDF text layer; all checks pass |
-| invoice_03.pdf | Registered / Review | Depends on date format; due-date parser handles 翌月末 |
-| invoice_04.jpg–invoice_08.jpg | Review (most) | Scanned images; medium confidence; human approves |
-| invoice_09.pdf | Review | PDF with scanned image inside; treated as image |
-| invoice_10.jpg–invoice_12.jpg | Mix | Cleaner scans may auto-register; blurry ones go to review |
+| invoice_01.pdf | `NEEDS_REVIEW` | Detected as a duplicate invoice, so it was not registered again. |
+| invoice_02.pdf | `NEEDS_REVIEW` | The extracted subtotal and tax did not match the recalculated values. |
+| invoice_03.pdf | `NEEDS_REVIEW` | The supplier could not be matched to a partner in the accounting master. |
+| invoice_04.jpg | `NEEDS_REVIEW` | The supplier could not be matched to a partner in the accounting master. |
+| invoice_05.jpg | `NEEDS_REVIEW` | Detected as a duplicate invoice, so it was sent for review. |
+| invoice_06.jpg | `NEEDS_REVIEW` | The supplier could not be matched to a partner in the accounting master. |
+| invoice_07.jpg | `NEEDS_REVIEW` | The supplier could not be matched to a partner in the accounting master. |
+| invoice_08.jpg | `NEEDS_REVIEW` | The supplier could not be matched, and the tax and total also failed validation. |
+| invoice_09.pdf | `NEEDS_REVIEW` | The supplier could not be matched and the extracted total did not pass validation. |
+| invoice_10.jpg | `NEEDS_REVIEW` | The supplier could not be matched to a partner in the accounting master. |
+| invoice_11.jpg | `EXTRACTION_FAILED` | The extraction was retried up to three times but did not produce a usable result. |
+| invoice_12.jpg | `NEEDS_REVIEW` | The extracted subtotal and tax did not match the recalculated values. |
 
-(Exact per-invoice results are in `data/results/results.json` after running the pipeline.)
+These results are taken from `data/results/results.json` from the latest pipeline run. In this run, no invoice was automatically registered because every document either failed a validation check or failed extraction.
 
 ---
 
 ## 7. Cost, limits, and risk in production
 
-- **Cost per invoice**: ~$0.003–0.008 USD
-  - Input: ~300k pixels × 2 pages → ~800 tokens image overhead + ~200 tokens prompt = ~1000 tokens input
-  - Output: ~400 tokens (JSON response)
-  - gpt-4o-mini: $0.15/M input + $0.60/M output → ≈ $0.0004 per invoice
-  - Actual cost is dominated by the image token cost: high-detail images cost ~$0.003 each
-  - Round estimate: **$0.005 per invoice** (including retries)
+The main cost is the vision API call. For the sample invoices, I estimate roughly $0.003 to $0.008 per document, depending on the number of pages, image detail, and whether a retry is needed. The exact amount will vary with the OpenAI pricing and the size of each document, so I would treat this as a planning estimate rather than a fixed price.
 
-- **Monthly cost at 1,000 invoices/month**: ~$5 USD
+At the current estimate, processing 1,000 invoices would cost approximately $3–$8 for extraction. The pipeline processes documents sequentially, one at a time, with each API request allowed up to three attempts. For the 12 sample invoices, the total processing time is approximately 2 minutes, although slow API responses or retries may increase the runtime. At this rate, processing 1,000 invoices sequentially would take around 1.5–2.5 hours, while 10× parallel processing could reduce this to approximately 15 minutes. The current sequential approach is sufficient for the present volume, while larger volumes would benefit from controlled batching and rate limiting.
 
-- **Processing time per invoice**: 5–15 seconds (API latency for image upload + inference)
-  - For 12 invoices: ~2 minutes total
-  - For 1,000 invoices: ~1.5–2.5 hours if sequential; ~15 minutes with 10× parallelism
+The main production risks I see are:
 
-- **Where this breaks first**:
-  1. *OpenAI rate limits*: gpt-4o-mini has a tokens-per-minute cap. At 1,000 invoices/day, I'd hit it without batching/backoff.
-  2. *Partner master drift*: If a supplier changes their company name and the master isn't updated, all their invoices go to manual review permanently.
-  3. *Handwriting*: Heavily hand-annotated invoices (e.g., hand-written amounts on a printed form) reduce confidence significantly.
-  4. *Multi-page invoices*: The current implementation sends all pages but displays only the first in the review UI.
+1. **API limits or temporary failures:** A larger batch may hit OpenAI rate limits or experience timeouts. The current code retries extraction failures, but a production version should also use explicit rate limiting, logging, and monitoring.
+2. **Changes to the partner master:** If a supplier changes its name or the partner list is not updated, valid invoices may be sent to manual review. Fetching the partner list at the start of each run helps, but it does not replace keeping the master data accurate.
+3. **Poor-quality or handwritten invoices:** Blurry scans, stamps, and handwritten changes can reduce extraction confidence or produce incorrect amounts. The validation checks and review step reduce this risk, but they cannot make an unreadable document reliable automatically.
+4. **Multi-page review:** The extractor can send all pages to the model, but the review screen currently focuses on the document preview available to the reviewer. A production UI should make every page easy to inspect.
 
-- **How I would find out if something was registered incorrectly**:
-  - Every auto-registration records the `accounting_id` in `results.json` — full audit trail.
-  - A monthly reconciliation script comparing `GET /invoices` totals against the accounting system's own bank reconciliation would catch discrepancies.
-  - The duplicate check prevents double-registration, but does not catch wrong amounts — those would surface at payment time if a supplier queries.
-  - For production: add a post-registration webhook or email alert with the registered values for each auto-processed invoice, so a human spot-checks a sample each day.
+The current safeguards are the confidence threshold, deterministic calculation checks, duplicate detection, retries, and the human review workflow. Every processed invoice is also written to `data/results/results.json`. For production, I would add a reconciliation report comparing registered invoice numbers and totals with the accounting system, plus an alert or daily report so the accounting team can spot-check automatically registered invoices.
 
 ---
 
 ## 8. What I would do with another 8 hours
 
-1. **Parallelise extraction with async + rate-limit-aware batching** — The pipeline currently processes invoices sequentially. With `asyncio` + a token-bucket rate limiter, 1,000 invoices could be processed in ~15 minutes instead of 2+ hours. This is the highest-leverage improvement for production readiness.
+With another eight hours, I would focus first on making the pipeline more reliable at a larger volume, then improve the controls around registered invoices and the human review experience.
 
-2. **Add a post-registration reconciliation report** — After each batch run, generate a summary (CSV + email) listing every auto-registered invoice with its amounts, and flag any where the extracted total differs from what the API accepted. This closes the feedback loop and gives the accounting team confidence to extend the auto-registration threshold.
+**1. Add controlled batching and rate limiting (about 4 hours)**
 
-3. **Improve the review UI with inline image annotation** — Currently the reviewer must mentally cross-reference the image with the form. Adding clickable field highlighting (click a field → jump to that region of the image) would significantly reduce review time per invoice and lower the chance of human error.
+The current pipeline processes invoices sequentially because sending all 12 documents to the OpenAI API at the same time could cause rate-limit or timeout problems. I would add a small worker pool with a rate limiter, rather than unrestricted parallel requests. This would reduce processing time for larger batches while still respecting the API limits. I would also add clearer logging for retries and failed documents.
+
+**2. Add a reconciliation report (about 2 hours)**
+
+After each run, I would generate a CSV or summary report containing the invoices that were automatically registered, their totals, partner codes, and accounting IDs. The report could highlight differences between the values extracted by the pipeline and the values accepted by the accounting API. This would give the accounting team a simple way to review the batch and catch problems early.
+
+**3. Improve the review workflow (about 2 hours)**
+
+The review screen already shows the document and the extracted form, but I would make it more user-friendly for someone processing many invoices. I would keep the invoice preview and form visible side by side, add a clear status and issue summary at the top, and highlight the fields that need attention. The reviewer should be able to edit supplier, date, amount, tax, and invoice number fields directly without leaving the page.
+
+I would also add simple navigation between review items, support all pages of a multi-page invoice, and make important form fields link to the relevant part of the document where possible. Before approval, the UI should show the corrected values and any remaining validation errors so the reviewer can confirm the result. These changes would make it easier to compare the source document with the extracted data and reduce the chance of approving an invoice with an unresolved issue.
+
+These improvements would keep the main design unchanged: use AI for extraction, use deterministic code for validation, and keep a human involved whenever the system is not sufficiently confident.
